@@ -34,7 +34,21 @@ public abstract class Production {
   }
 
   public String getTitle() {
-    return title;
+
+    return this.title;
+
+  }
+
+  public double getStars() {
+
+    return this.stars;
+
+  }
+
+  public String getRating() {
+
+    return this.rating;
+
   }
 
 }

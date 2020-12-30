@@ -15,4 +15,28 @@ public class Series extends Production {
 
   }
 
+  public int getSeasons() {
+
+    return this.seasons;
+
+  }
+
+  public String getStartDate() {
+
+    return this.startDate;
+
+  }
+
+  public String getEndDate() {
+
+    return this.endDate;
+
+  }
+
+  public String getCreator() {
+
+    return this.creator;
+
+  }
+
 }
