@@ -5,9 +5,9 @@ public class Series extends Production {
   private String endDate;
   private String creator;
 
-  public Series(String theTitle, double theStars, String theRating, int theSeasons, String theStartDate, String theEndDate, String theCreator) {
+  public Series(String theTitle, double theStars, String theRating, boolean animated, int theSeasons, String theStartDate, String theEndDate, String theCreator) {
 
-    super(theTitle, theStars, theRating);
+    super(theTitle, theStars, theRating, animated);
     this.seasons = theSeasons;
     this.startDate = theStartDate;
     this.endDate = theEndDate;
@@ -36,6 +36,12 @@ public class Series extends Production {
   public String getCreator() {
 
     return this.creator;
+
+  }
+
+  public void play(String title) {
+
+    System.out.println("you watched " + title);
 
   }
 
