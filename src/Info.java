@@ -3,8 +3,8 @@ import java.util.Arrays;
 
 public class Info {
 
-  ArrayList<String> shows = new ArrayList<String>();
-  ArrayList<String> movies = new ArrayList<String>();
+  ArrayList<Series> shows = new ArrayList<Series>();
+  ArrayList<Movie> movies = new ArrayList<Movie>();
 
   Genre crimeTVDramas = new Genre("Crime TV Dramas");
   Genre TVThrillers = new Genre("TV Thrillers");
@@ -68,8 +68,6 @@ public class Info {
   // shows
   public void createBreakingBad() {
 
-    shows.add(breakingBad.getTitle());
-
     breakingBad.addGenre(crimeTVDramas);
     breakingBad.addGenre(TVThrillers);
     breakingBad.addGenre(TVDramas);
@@ -88,6 +86,8 @@ public class Info {
 
     Actor betsyBrandt = new Actor("Betsy Brandt", "March 14, 1973");
     breakingBad.addActor(betsyBrandt);
+
+    shows.add(breakingBad);
 
   }
 
@@ -120,8 +120,6 @@ public class Info {
 
   public void createBrooklyn99() {
 
-    shows.add(brooklyn99.getTitle());
-
     brooklyn99.addGenre(sitcom);
     brooklyn99.addGenre(TVComedies);
 
@@ -139,6 +137,8 @@ public class Info {
 
     Actor melissaFumero = new Actor("Melissa Fumero", "August 19, 1982");
     brooklyn99.addActor(melissaFumero);
+
+    shows.add(brooklyn99);
 
   }
 
@@ -171,8 +171,6 @@ public class Info {
 
   public void createLucifer() {
 
-    shows.add(lucifer.getTitle());
-
     lucifer.addGenre(crimeTVDramas);
     lucifer.addGenre(fantasyTVShows);
     lucifer.addGenre(TVShowsBasedOnComics);
@@ -192,6 +190,8 @@ public class Info {
 
     Actor lesleyannBrandt = new Actor("Lesley-Ann Brandt", "December 2, 1981");
     lucifer.addActor(lesleyannBrandt);
+
+    shows.add(lucifer);
 
   }
 
@@ -224,8 +224,6 @@ public class Info {
 
   public void createYou() {
 
-    shows.add(you.getTitle());
-
     you.addGenre(TVShowsBasedOnBooks);
     you.addGenre(TVThrillers);
     you.addGenre(TVDramas);
@@ -244,6 +242,8 @@ public class Info {
 
     Actor jennaOrtega = new Actor("Jenna Ortega", "September 27, 2002");
     you.addActor(jennaOrtega);
+
+    shows.add(you);
 
   }
 
@@ -276,8 +276,6 @@ public class Info {
 
   public void createCaos() {
 
-    shows.add(caos.getTitle());
-
     caos.addGenre(fantasyTVShows);
     caos.addGenre(TVShowsBasedOnComics);
     caos.addGenre(teenTVShows);
@@ -297,6 +295,8 @@ public class Info {
 
     Actor chancePerdomo = new Actor("Chance Perdomo", "October 19, 1996");
     caos.addActor(chancePerdomo);
+
+    shows.add(caos);
 
   }
 
@@ -332,8 +332,6 @@ public class Info {
   // movies
   public void createSpiderverse() {
 
-    movies.add(spiderverse.getTitle());
-
     spiderverse.addGenre(actionAdventure);
     spiderverse.addGenre(actionComedies);
     spiderverse.addGenre(adventures);
@@ -354,6 +352,8 @@ public class Info {
 
     Actor laurenVelez = new Actor("Lauren Vélez", "November 2, 1964");
     spiderverse.addActor(laurenVelez);
+
+    movies.add(spiderverse);
 
   }
 
@@ -387,8 +387,6 @@ public class Info {
 
   public void createRobinHood() {
 
-    movies.add(robinHood.getTitle());
-
     robinHood.addGenre(actionAdventure);
     robinHood.addGenre(adventures);
 
@@ -406,6 +404,8 @@ public class Info {
 
     Actor jamieDornan = new Actor("Jamie Dornan", "May 1, 1982");
     robinHood.addActor(jamieDornan);
+
+    movies.add(robinHood);
 
   }
 
@@ -439,8 +439,6 @@ public class Info {
 
   public void createJohnnyEnglish() {
 
-    movies.add(johnnyEnglish.getTitle());
-
     johnnyEnglish.addGenre(british);
     johnnyEnglish.addGenre(actionAdventure);
     johnnyEnglish.addGenre(actionComedies);
@@ -461,6 +459,8 @@ public class Info {
 
     Actor benMiller = new Actor("Ben Miller", "February 24, 1966");
     johnnyEnglish.addActor(benMiller);
+
+    movies.add(johnnyEnglish);
 
   }
 
@@ -494,8 +494,6 @@ public class Info {
 
   public void createJohnnyEnglishReborn() {
 
-    movies.add(johnnyEnglishReborn.getTitle());
-
     johnnyEnglishReborn.addGenre(british);
     johnnyEnglishReborn.addGenre(familyFeatures);
     johnnyEnglishReborn.addGenre(familyComedies);
@@ -517,6 +515,8 @@ public class Info {
 
     Actor danielKaluuya = new Actor("Daniel Kaluuya", "February 24, 1989");
     johnnyEnglishReborn.addActor(danielKaluuya);
+
+    movies.add(johnnyEnglishReborn);
 
   }
 
@@ -550,8 +550,6 @@ public class Info {
 
   public void createJohnnyEnglishStrikesAgain() {
 
-    movies.add(johnnyEnglishStrikesAgain.getTitle());
-
     johnnyEnglishStrikesAgain.addGenre(familyFeatures);
     johnnyEnglishStrikesAgain.addGenre(familyComedies);
     johnnyEnglishStrikesAgain.addGenre(actionAdventure);
@@ -573,6 +571,8 @@ public class Info {
 
     Actor matthewBeard = new Actor("Matthew Beard", "March 25, 1989");
     johnnyEnglishStrikesAgain.addActor(matthewBeard);
+
+    movies.add(johnnyEnglishStrikesAgain);
 
   }
 
@@ -606,8 +606,6 @@ public class Info {
 
   public void createElCamino() {
 
-    movies.add(elCamino.getTitle());
-
     elCamino.addGenre(dramas);
     elCamino.addGenre(crimeDramas);
     elCamino.addGenre(thrillerMovies);
@@ -615,6 +613,8 @@ public class Info {
 
     Actor aaronPaul = new Actor("Aaron Paul", "August 27, 1979");
     elCamino.addActor(aaronPaul);
+
+    movies.add(elCamino);
 
   }
 
@@ -648,8 +648,6 @@ public class Info {
 
   public void createJurassicWorldFallenKingdom() {
 
-    movies.add(jurassicWorldFallenKingdom.getTitle());
-
     jurassicWorldFallenKingdom.addGenre(actionAdventure);
     jurassicWorldFallenKingdom.addGenre(adventures);
     jurassicWorldFallenKingdom.addGenre(scifiFantasy);
@@ -670,6 +668,8 @@ public class Info {
 
     Actor tobyJones = new Actor("Toby Jones", "September 7, 1966");
     jurassicWorldFallenKingdom.addActor(tobyJones);
+
+    movies.add(jurassicWorldFallenKingdom);
 
   }
 
@@ -703,8 +703,6 @@ public class Info {
 
   public void createVenom() {
 
-    movies.add(venom.getTitle());
-
     venom.addGenre(actionAdventure);
     venom.addGenre(adventures);
     venom.addGenre(comicBookAndSuperHeroMovies);
@@ -726,6 +724,8 @@ public class Info {
 
     Actor reidScott = new Actor("Reid Scott", "November 19, 1977");
     venom.addActor(reidScott);
+
+    movies.add(venom);
 
   }
 
@@ -759,8 +759,6 @@ public class Info {
 
   public void createJurassicWorldCampCretaceous() {
 
-    shows.add(jurassicWorldCampCretaceous.getTitle());
-
     jurassicWorldCampCretaceous.addGenre(actionAdventure);
     jurassicWorldCampCretaceous.addGenre(adventures);
     jurassicWorldCampCretaceous.addGenre(comicBookAndSuperHeroMovies);
@@ -782,6 +780,8 @@ public class Info {
 
     Actor ryanPotter = new Actor("Ryan Potter", "September 12, 1995");
     jurassicWorldCampCretaceous.addActor(ryanPotter);
+
+    shows.add(jurassicWorldCampCretaceous);
 
   }
 

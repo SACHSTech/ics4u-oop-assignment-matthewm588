@@ -29,13 +29,13 @@ public class MainProgram {
     info.createJurassicWorldFallenKingdom();
     info.createVenom();
 
-    Collections.sort(info.shows);
-    Collections.sort(info.movies);
+    //Collections.sort(info.shows);
+    //Collections.sort(info.movies);
 
     System.out.println("Shows:");
     for (int i = 0; i < info.shows.size(); i++) {
 
-      System.out.println(info.shows.get(i));
+      System.out.println(info.shows.get(i).getTitle());
 
     }
     System.out.println();
@@ -43,7 +43,7 @@ public class MainProgram {
     System.out.println("Movies:");
     for (int i = 0; i < info.movies.size(); i++) {
 
-      System.out.println(info.movies.get(i));
+      System.out.println(info.movies.get(i).getTitle());
 
     }
     System.out.println();
@@ -57,7 +57,7 @@ public class MainProgram {
 
       choice = "";
 
-      System.out.println("Choose a show to see info or watch (type name exactly to watch, put the word 'info' before title to view info), or type 'my list' to view your list, or type 'view productions' to see the list of movies and shows again, or type 'exit' to exit.");
+      System.out.println("Choose a show to see info or watch (type name exactly to watch, put the word 'info' before title to view info), or type 'my list' to view your list, or type 'view productions' to see the list of movies and shows again, or type 'recommend' to get recommended shows for you, or type 'exit' to exit.");
       choice = keyboard.readLine();
 
       if (choice.equalsIgnoreCase("exit")) {
@@ -246,7 +246,7 @@ public class MainProgram {
         System.out.println("Shows:");
         for (int i = 0; i < info.shows.size(); i++) {
 
-          System.out.println(info.shows.get(i));
+          System.out.println(info.shows.get(i).getTitle());
 
         }
         System.out.println();
@@ -254,9 +254,22 @@ public class MainProgram {
         System.out.println("Movies:");
         for (int i = 0; i < info.movies.size(); i++) {
 
-          System.out.println(info.movies.get(i));
+          System.out.println(info.movies.get(i).getTitle());
 
         }
+        System.out.println();
+
+      } else if (choice.equalsIgnoreCase("recommend")) {
+
+        System.out.println();
+        System.out.println("Recommended movies and shows for you:");
+        System.out.println(myList.getReccomendations());
+        System.out.println(myList.getMovieReccomendations());
+
+      } else {
+
+        System.out.println();
+        System.out.println("Error. Make sure everything is typed exactly as shown (capitals don't matter)");
 
       }
 
