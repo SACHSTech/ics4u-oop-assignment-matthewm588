@@ -1,8 +1,13 @@
 import java.io.*;
-import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.Collections;
 
+/**
+* A program MainProgram.java that lets the user select a show or movie and either watch it, or view
+* information about it. The user can also view recommendations that derive from your viewed shows and
+* movies.
+* @author Matthew Morelli
+*
+*/
 public class MainProgram {
 
   public static void main(String args[]) throws IOException {
@@ -11,6 +16,7 @@ public class MainProgram {
     MyList myList = new MyList();
     String choice;
     boolean run = true;
+    String previous = "";
     
     info.createBreakingBad();
     info.createBrooklyn99();
@@ -19,6 +25,12 @@ public class MainProgram {
     info.createCaos();
     info.createSpiderverse();
     info.createJurassicWorldCampCretaceous();
+    info.createAtla();
+    info.createTheUmbrellaAcademy();
+    info.createBetterCallSaul();
+    info.createModernFamily();
+    info.createMoneyHeist();
+    info.createTheGoodPlace();
 
     info.createSpiderverse();
     info.createRobinHood();
@@ -28,9 +40,7 @@ public class MainProgram {
     info.createElCamino();
     info.createJurassicWorldFallenKingdom();
     info.createVenom();
-
-    //Collections.sort(info.shows);
-    //Collections.sort(info.movies);
+    info.createInception();
 
     System.out.println("Shows:");
     for (int i = 0; i < info.shows.size(); i++) {
@@ -43,7 +53,14 @@ public class MainProgram {
     System.out.println("Movies:");
     for (int i = 0; i < info.movies.size(); i++) {
 
-      System.out.println(info.movies.get(i).getTitle());
+
+      // used to fix bug where spiderverse prints twice
+      if (!previous.equals(info.movies.get(i).getTitle())) {
+
+        System.out.println(info.movies.get(i).getTitle());
+        previous = info.movies.get(i).getTitle();
+
+      }
 
     }
     System.out.println();
@@ -232,6 +249,78 @@ public class MainProgram {
         System.out.println();
         info.printVenom();
 
+      } else if (choice.equalsIgnoreCase("avatar: the last airbender")) {
+        
+        System.out.println();
+        info.atla.play(info.atla.getTitle());
+        myList.addProduction(info.atla);
+
+      } else if (choice.equalsIgnoreCase("info avatar: the last airbender")) {
+        
+        System.out.println();
+        System.out.println();
+        info.printAtla();
+
+      } else if (choice.equalsIgnoreCase("the umbrella academy")) {
+        
+        System.out.println();
+        info.theUmbrellaAcademy.play(info.theUmbrellaAcademy.getTitle());
+        myList.addProduction(info.theUmbrellaAcademy);
+
+      } else if (choice.equalsIgnoreCase("info the umbrella academy")) {
+        
+        System.out.println();
+        System.out.println();
+        info.printTheUmbrellaAcademy();
+
+      } else if (choice.equalsIgnoreCase("better call saul")) {
+        
+        System.out.println();
+        info.betterCallSaul.play(info.betterCallSaul.getTitle());
+        myList.addProduction(info.betterCallSaul);
+
+      } else if (choice.equalsIgnoreCase("info better call saul")) {
+        
+        System.out.println();
+        System.out.println();
+        info.printBetterCallSaul();
+
+      } else if (choice.equalsIgnoreCase("money heist")) {
+        
+        System.out.println();
+        info.moneyHeist.play(info.moneyHeist.getTitle());
+        myList.addProduction(info.moneyHeist);
+
+      } else if (choice.equalsIgnoreCase("info money heist")) {
+        
+        System.out.println();
+        System.out.println();
+        info.printMoneyHeist();
+
+      } else if (choice.equalsIgnoreCase("the good place")) {
+        
+        System.out.println();
+        info.theGoodPlace.play(info.theGoodPlace.getTitle());
+        myList.addProduction(info.theGoodPlace);
+
+      } else if (choice.equalsIgnoreCase("info the good place")) {
+        
+        System.out.println();
+        System.out.println();
+        info.printTheGoodPlace();
+
+      } else if (choice.equalsIgnoreCase("inception")) {
+        
+        System.out.println();
+        info.inception.play(info.inception.getTitle());
+        myList.addProduction(info.inception);
+
+      } else if (choice.equalsIgnoreCase("info inception")) {
+        
+        System.out.println();
+        System.out.println();
+        info.printInception();
+
       } else if (choice.equalsIgnoreCase("my list")) {
         System.out.println();
         for (int i = 0; i < myList.productionsSeen.size(); i++) {
@@ -239,6 +328,18 @@ public class MainProgram {
           System.out.println(myList.productionsSeen.get(i).getTitle());
 
         }
+
+      } else if (choice.equalsIgnoreCase("modern family")) {
+        
+        System.out.println();
+        info.modernFamily.play(info.modernFamily.getTitle());
+        myList.addProduction(info.modernFamily);
+
+      } else if (choice.equalsIgnoreCase("info modern family")) {
+        
+        System.out.println();
+        System.out.println();
+        info.printModernFamily();
 
       } else if (choice.equalsIgnoreCase("view productions")) {
 
@@ -254,7 +355,14 @@ public class MainProgram {
         System.out.println("Movies:");
         for (int i = 0; i < info.movies.size(); i++) {
 
-          System.out.println(info.movies.get(i).getTitle());
+
+        // used to fix bug where spiderverse prints twice
+        if (!previous.equals(info.movies.get(i).getTitle())) {
+
+            System.out.println(info.movies.get(i).getTitle());
+            previous = info.movies.get(i).getTitle();
+
+          }
 
         }
         System.out.println();
