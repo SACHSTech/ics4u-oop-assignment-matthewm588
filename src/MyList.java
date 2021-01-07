@@ -27,7 +27,7 @@ public class MyList {
   *
   * @return The recommended shows for the user
   */
-  public String getReccomendations() {
+  public String getShowReccomendations() {
 
     String reccomendations = "";
     // to prevent duplicate shows getting recommended

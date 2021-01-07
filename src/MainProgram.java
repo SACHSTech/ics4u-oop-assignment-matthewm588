@@ -371,7 +371,7 @@ public class MainProgram {
 
         System.out.println();
         System.out.println("Recommended movies and shows for you:");
-        System.out.println(myList.getReccomendations());
+        System.out.println(myList.getShowReccomendations());
         System.out.println(myList.getMovieReccomendations());
 
       } else {
